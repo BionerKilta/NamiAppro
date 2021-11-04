@@ -1,0 +1,16 @@
+.example-counter {
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: lightgrey;
+  margin: 5px;
+}
+
+.example-counter:hover {
+  background-color: grey;
+}
+
+.purple-text {
+  color: purple;
+}

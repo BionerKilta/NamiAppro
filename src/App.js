@@ -1,5 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import {
+  CounterClass,
+  CounterFunction
+} from "./examples";
 
 function App() {
   return (
@@ -18,6 +22,17 @@ function App() {
           Learn React
         </a>
       </header>
+      <div>
+
+        <CounterClass
+          renderText="Class counter: "
+        />
+
+        <CounterFunction
+          renderText="Function counter: "
+        />
+
+      </div>
     </div>
   );
 }
