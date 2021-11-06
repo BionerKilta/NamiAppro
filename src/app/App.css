@@ -1,0 +1,52 @@
+.App {
+  background-color: #282c34;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .spin-clockwise {
+    animation: spin-clockwise infinite 15s linear;
+  }
+  .spin-counter-clockwise {
+    animation: spin-counter-clockwise infinite 15s linear;
+  }
+}
+
+.animation-paused {
+  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes spin-clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-counter-clockwise {
+  from {
+    transform: rotate(0deg);
+  } to {
+    transform: rotate(-360deg);
+  }
+}
