@@ -1,10 +1,12 @@
 import { useState } from "react";
-import './App.css';
-import { logo } from "../img";
+import { Header } from "../components";
 import {
   CounterClass,
-  CounterFunction
+  CounterFunction,
+  LotOfText
 } from "../examples";
+import { logo } from "../img";
+import './App.css';
 
 function App() {
   const [rotateLogo, setRotateLogo] = useState(false);
@@ -34,13 +36,16 @@ function App() {
       <div
         className="logo-container"
         onClick={toggleLogoRotation}
+        data-testid="logo-container"
       >
         <img
           src={logo}
           className={getLogoClasses()}
           alt="logo"
+          data-testid="logo"
         />
       </div>
+      <Header />
       <div>
 
         <CounterClass
@@ -51,6 +56,10 @@ function App() {
           renderText="Function counter: "
         />
 
+      </div>
+
+      <div>
+        <LotOfText />
       </div>
     </div>
   );
