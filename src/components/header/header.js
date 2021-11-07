@@ -12,11 +12,18 @@ import "./header.css";
 export default function Header(props) {
   return (
     <div className="header-bar stick-to-top">
-      <div className="header-item">
-        Some header item
+      <div className="header-link-container header-left">
+        <div className="header-item">
+          Some header item
+        </div>
+        <div className="header-item">
+          Some other header item
+        </div>
       </div>
-      <div className="header-item">
-        Some other header item
+      <div className="header-link-container header-right">
+        <div className="header-item">
+          "some item"
+        </div>
       </div>
     </div>
   );
