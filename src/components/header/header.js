@@ -1,4 +1,5 @@
 import React from "react";
+import { LanguageToggle } from "..";
 import "./header.css";
 
 /**
@@ -22,7 +23,7 @@ export default function Header(props) {
       </div>
       <div className="header-link-container header-right">
         <div className="header-item">
-          "some item"
+          <LanguageToggle />
         </div>
       </div>
     </div>
