@@ -17,9 +17,3 @@
 .header-right {
   float: right;
 }
-
-.header-item {
-  display: inline-block;
-  margin-left: 1rem;
-  margin-right: 1rem;
-}

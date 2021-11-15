@@ -1,5 +1,5 @@
-import React from "react";
-import { LanguageToggle } from "..";
+import React, { useState } from "react";
+import { LanguageToggle, HeaderItem } from "..";
 import "./header.css";
 
 /**
@@ -11,15 +11,32 @@ import "./header.css";
  * @returns {JSX.Element} header bar
  */
 export default function Header(props) {
+  const [selected, setSelected] = useState("item-1");
+
   return (
-    <div className="header-bar stick-to-top">
+    <div className="header-bar stick-to-top" data-testid="header-bar">
       <div className="header-link-container header-left">
-        <div className="header-item">
-          Some header item
-        </div>
-        <div className="header-item">
-          Some other header item
-        </div>
+        <HeaderItem
+          id="item-1"
+          data_testid="header-item-1"
+          text="Some header item"
+          onClick={setSelected}
+          selected={selected === "item-1"}
+        />
+        <HeaderItem
+          id="item-2"
+          data_testid="header-item-2"
+          text="Some other header item"
+          onClick={setSelected}
+          selected={selected === "item-2"}
+        />
+        <HeaderItem
+          id="item-3"
+          data_testid="header-item-3"
+          text="Yet some other header item"
+          onClick={setSelected}
+          selected={selected === "item-3"}
+        />
       </div>
       <div className="header-link-container header-right">
         <div className="header-item">

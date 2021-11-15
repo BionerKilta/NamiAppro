@@ -1,0 +1,23 @@
+.header-item {
+  display: inline-block;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.selected {
+  color: red;
+  transform: scale(1.1);
+  animation: size_increase_bounce 0.15s ease-in-out;
+}
+
+@keyframes size_increase_bounce {
+  0% { color: black; }
+  10% { transform: scale(0.9); }
+  50% {
+    transform: scale(1);
+    color: red;
+  }
+  80% { transform: scale(1.15); }
+  90% { transform: scale(1.1); }
+}
